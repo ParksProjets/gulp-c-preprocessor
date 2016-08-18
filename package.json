@@ -1,0 +1,35 @@
+{
+	"name": "gulp-c-preprocessor",
+	"description": "Gulp plugin to use a C like preprocessor for JS.",
+	"version": "0.0.1",
+
+	"author": {
+		"name": "Guillaume Gonnet",
+		"url": "https://github.com/ParksProjets"
+	},
+	"repository": "ParksProjets/gulp-c-preprocessor",
+	"license": {
+		"type": "GPLv3",
+		"url": "https://github.com/ParksProjets/gulp-c-preprocessor/blob/master/LICENSE"
+	},
+
+	"main": "index.js",
+
+	"keywords": [
+		"gulp",
+		"gulpplugin",
+		"preprocessor",
+		"compile",
+		"compiler",
+		"c"
+	],
+	"files": [
+		"index.js"
+	],
+
+	"dependencies": {
+		"gulp-util": "^3.0.2",
+		"c-preprocessor": "^0.2.4",
+		"through2": "^0.6.3"
+	}
+}
