@@ -1,7 +1,7 @@
 {
 	"name": "gulp-c-preprocessor",
 	"description": "Gulp plugin for using a C like preprocessor with JS.",
-	"version": "0.0.3",
+	"version": "0.0.4",
 
 	"author": {
 		"name": "Guillaume Gonnet",
@@ -29,7 +29,7 @@
 
 	"dependencies": {
 		"gulp-util": "^3.0.2",
-		"c-preprocessor": "^0.2.6",
+		"c-preprocessor": "^0.2.7",
 		"through2": "^0.6.3"
 	}
 }
