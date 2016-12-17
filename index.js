@@ -9,12 +9,8 @@ License GPLv3
 */
 
 var through = require('through2');
-var gutil = require('gulp-util');
 var compiler = require('c-preprocessor');
 var path = require('path');
-
-var PluginError = gutil.PluginError;
-
 
 
 module.exports = function(options) {
@@ -27,7 +23,7 @@ module.exports = function(options) {
  		
  		// Is the file is a stream: not supported
  		if (file.isStream())
- 			return cb(new PluginError('gulp-c-preprocessor', 'Streams are not supported'));
+ 			return cb(new Error('gulp-c-preprocessor: ' + 'Streams are not supported'));
 
 
  		// Options
@@ -39,7 +35,7 @@ module.exports = function(options) {
 		compiler.compile(file.contents.toString('utf8'), options, function(err, data) {
 
 			if (err)
-				return cb(new PluginError('gulp-c-preprocessor', err));
+				return cb(new Error('gulp-c-preprocessor: ' + err));
 
 			file.contents = new Buffer(data);
 			cb(null, file);
